@@ -1,8 +1,30 @@
 aid: mirror
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mirror.png
 name: Mirror
-description: Mirror is a company surfaced as a portfolio company of a16z, pantera-capital, spark-capital
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Mirror Protocol is a decentralized finance (DeFi) synthetic-assets protocol
+  built on the Terra blockchain (with an Ethereum bridge) that mints mirrored
+  assets (mAssets) tracking the prices of real-world equities, commodities, and
+  other assets. Its public developer surface is the Mirror API — a read-only
+  GraphQL data service exposing protocol state (assets, prices, positions,
+  staking) — together with the mirror.js JavaScript/TypeScript SDK and the
+  mirrorcli command-line interface for querying and executing against the
+  on-chain CosmWasm contracts. The protocol is governed by the MIR token. It is
+  now in a legacy/dormant state following the May 2022 Terra/LUNA collapse,
+  though its documentation, GitHub org, SDKs, and GraphQL endpoint remain
+  reachable.
 url: https://raw.githubusercontent.com/api-evangelist/mirror/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,10 +36,34 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- DeFi
+- Cryptocurrency
+- Blockchain
+- Synthetic Assets
+- GraphQL
+- Terra
+- Web3
+- Financial Services
+apis:
+- name: Mirror API
+  description: >-
+    Read-only GraphQL data service (Mirror Graph) exposing Mirror Protocol
+    state — synthetic assets (mAssets), prices, positions, and staking — from a
+    single unauthenticated HTTP POST endpoint, with a GraphiQL playground.
+  humanURL: https://docs.mirror.finance/developer-tools/mirror-api
+  baseURL: https://graph.mirror.finance/graphql
+  tags:
+  - GraphQL
+  - DeFi
+  - Data
+  properties:
+  - type: APIReference
+    url: https://docs.mirror.finance/developer-tools/mirror-api
+  - type: Sandbox
+    url: sandbox/mirror-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +72,46 @@ maintainers:
 common:
 - type: Website
   url: https://mirror.finance/
+- type: DeveloperPortal
+  url: https://docs.mirror.finance/
+- type: Documentation
+  url: https://docs.mirror.finance/
+- type: APIReference
+  url: https://docs.mirror.finance/developer-tools/mirror-api
+- type: GettingStarted
+  url: https://docs.mirror.finance/developer-tools/mirror-api
+- type: GitHubOrganization
+  url: https://github.com/mirror-protocol
+- type: Blog
+  url: https://mirror-protocol.medium.com/
+- type: Security
+  url: https://docs.mirror.finance/security
+- type: SDKs
+  url: packages/mirror-packages.yml
+- type: Packages
+  url: packages/mirror-packages.yml
+- type: CLI
+  url: cli/mirror-cli.yml
+- type: Authentication
+  url: authentication/mirror-authentication.yml
+- type: Conventions
+  url: conventions/mirror-conventions.yml
+- type: Conformance
+  url: conformance/mirror-conformance.yml
+- type: Sandbox
+  url: sandbox/mirror-sandbox.yml
+- type: Lifecycle
+  url: lifecycle/mirror-lifecycle.yml
+- type: DomainSecurity
+  url: security/mirror-domain-security.yml
+- type: VulnerabilityDisclosure
+  url: security/mirror-vulnerability-disclosure.yml
+- type: MCPServer
+  url: mcp/mirror-mcp.yml
+- type: LLMsTxt
+  url: llms/mirror-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
