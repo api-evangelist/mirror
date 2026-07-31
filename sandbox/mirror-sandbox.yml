@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mirror.finance/developer-tools/mirror-api
+model: testnet-separation
+description: >-
+  Mirror exposes a testnet data surface separate from mainnet. There are no
+  test API keys or test card values (public unauthenticated GraphQL); the
+  test/live separation is by Terra network (testnet vs mainnet columbus-5),
+  selectable in tooling.
+environments:
+  - name: mainnet
+    chain_id: columbus-5
+    graphql: https://graph.mirror.finance/graphql
+  - name: testnet
+    chain_id: bombay-12
+    graphql: https://bombay-graph.mirror.finance/graphql
+    note: >-
+      Earlier testnets (tequila) were also referenced in Mirror docs and the
+      bug-bounty scope; bombay-12 is the documented current testnet.
+tooling:
+  mirrorcli:
+    switch: Set the MIRRORCLI_NETWORK environment variable to select the network.
+    config: LCD chain ID / URL / gas configured per network in ~/.mirrorclirc.json
+  mirror_js:
+    detail: >-
+      Instantiate the Mirror object against a terra.js LCDClient pointed at the
+      desired chain's LCD endpoint; default config uses columbus core contract addresses.
+notes: >-
+  Testnet funds are obtained from Terra faucet tooling (external to Mirror); no
+  Mirror-published magic test tokens or fixture values exist.

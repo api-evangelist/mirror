@@ -1,0 +1,26 @@
+# Mirror Protocol
+
+> Mirror Protocol is a decentralized finance (DeFi) synthetic-assets protocol built on the Terra blockchain (with an Ethereum bridge) that mints mirrored assets (mAssets) tracking the prices of real-world equities, commodities, and other assets. Its public developer surface is the Mirror API — a read-only GraphQL data service exposing protocol state (assets, prices, positions, staking) — plus the mirror.js SDK and mirrorcli command-line interface for querying and executing against the on-chain contracts. The protocol is governed by the MIR token and is now in a legacy/dormant state following the May 2022 Terra collapse.
+
+## API
+
+- [Mirror API (GraphQL)](https://docs.mirror.finance/developer-tools/mirror-api): Single-endpoint GraphQL data service. Mainnet POST https://graph.mirror.finance/graphql ; Testnet https://bombay-graph.mirror.finance/graphql . Unauthenticated. GraphiQL playground served at the endpoint.
+
+## Docs
+
+- [Developer Documentation](https://docs.mirror.finance/): Protocol, smart contracts, and developer tools.
+- [Mirror API reference](https://docs.mirror.finance/developer-tools/mirror-api): GraphQL data service usage and example queries.
+- [mirror.js SDK](https://docs.mirror.finance/developer-tools/mirror.js): JavaScript/TypeScript SDK.
+- [mirrorcli](https://docs.mirror.finance/developer-tools/mirror-cli): Command-line interface.
+- [Security & bug bounty](https://docs.mirror.finance/security): Responsible disclosure to security@mirror.finance.
+
+## SDKs and tools
+
+- [@mirror-protocol/mirror.js (npm)](https://www.npmjs.com/package/@mirror-protocol/mirror.js): Official JS/TS SDK.
+- [@mirror-protocol/mirrorcli (npm)](https://www.npmjs.com/package/@mirror-protocol/mirrorcli): Official CLI.
+
+## Source
+
+- [Mirror Protocol GitHub](https://github.com/mirror-protocol): SDKs, CLI, smart contracts, docs.
+- [mirror-contracts](https://github.com/Mirror-Protocol/mirror-contracts): Rust/CosmWasm smart contracts.
+- [Blog (Medium)](https://mirror-protocol.medium.com/): Announcements and updates.

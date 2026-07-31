@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/org/mirror-protocol
+packages:
+  - language: javascript
+    registry: npm
+    name: "@mirror-protocol/mirror.js"
+    url: https://www.npmjs.com/package/@mirror-protocol/mirror.js
+    install: npm install @mirror-protocol/mirror.js
+    repository: https://github.com/Mirror-Protocol/mirror.js
+    license: Apache-2.0
+    latest_version: 2.1.4
+    official: true
+    description: >-
+      The JavaScript/TypeScript SDK for Mirror Protocol. Exposes a Mirror object
+      with query (LCD smart-contract queries) and execute (MsgExecuteContract)
+      facilities across the protocol's contract modules (factory, mirrorToken,
+      staking, oracle, mint, collector, community, gov, airdrop). Used alongside
+      @terra-money/terra.js (LCDClient, MnemonicKey).
+  - language: typescript
+    registry: npm
+    name: "@mirror-protocol/mirrorcli"
+    url: https://www.npmjs.com/package/@mirror-protocol/mirrorcli
+    install: npm install -g @mirror-protocol/mirrorcli
+    repository: https://github.com/Mirror-Protocol/mirrorcli
+    license: Apache-2.0
+    official: true
+    kind: cli
+    description: >-
+      Command-line interface for Mirror Protocol. Ships as a global npm binary
+      (mirrorcli). Requires terracli (Terra Core) in PATH. Command surface is
+      catalogued in cli/mirror-cli.yml.
+notes: >-
+  Mirror Protocol publishes first-party client libraries under the
+  @mirror-protocol npm scope. No official Python, Go, Java, .NET or Rust client
+  SDK is published for the data/API surface; on-chain contract interaction is
+  handled through mirror.js + terra.js, and the smart contracts themselves
+  (Rust/CosmWasm) live at github.com/Mirror-Protocol/mirror-contracts.

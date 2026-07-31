@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: https://docs.mirror.finance/developer-tools/mirror-api
+server:
+  name: mirror
+  transport: http
+  url: null
+notes: >-
+  No official hosted/remote MCP server is published by Mirror Protocol. The tools
+  below are a DERIVED candidate surface wrapping the documented public Mirror API
+  (GraphQL) read queries; they are a starting point, not an authoritative
+  provider manifest. Full GraphQL schema introspection was not available at probe
+  time, so tools are limited to documented query fields.
+tools:
+  - name: list_assets
+    description: List Mirror synthetic assets (mAssets) with symbol and name.
+    source_operation: "graphql query { assets { symbol name } } @ https://graph.mirror.finance/graphql"
+  - name: get_prices
+    description: Query current/oracle prices for Mirror assets.
+    source_operation: "graphql query { prices { ... } } @ https://graph.mirror.finance/graphql"

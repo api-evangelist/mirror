@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+host: https://mirror.finance
+documents:
+  - path: /.well-known/security.txt
+    status: 200
+    valid: false
+    note: Returns the SPA index.html (DOCTYPE HTML), not an RFC 9116 security.txt.
+  - path: /.well-known/api-catalog
+    status: 200
+    valid: false
+    note: SPA catch-all HTML, not an RFC 9727 api-catalog document.
+  - path: /.well-known/openid-configuration
+    status: 200
+    valid: false
+    host: https://graph.mirror.finance
+    note: Empty body; no OIDC discovery document.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    valid: false
+    note: No RFC 8414 authorization-server metadata (API is unauthenticated GraphQL).
+notes: >-
+  mirror.finance is a single-page app that returns HTTP 200 with the app shell
+  for arbitrary paths, so no /.well-known document is genuinely published. No raw
+  files were saved. The provider's security disclosure lives at
+  docs.mirror.finance/security (see security/mirror-vulnerability-disclosure.yml),
+  not in a security.txt. No WellKnown/SecurityTxt pointer is wired.

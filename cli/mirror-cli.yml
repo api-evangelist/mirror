@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mirror.finance/developer-tools/mirror-cli
+name: mirrorcli
+binary: mirrorcli
+package: "@mirror-protocol/mirrorcli"
+install:
+  - method: npm
+    command: npm install -g @mirror-protocol/mirrorcli
+requirements:
+  - Node.js 12+
+  - terracli (Terra Core binary) available in PATH
+config:
+  file: ~/.mirrorclirc.json
+  generated_on_first_launch: true
+  network_env: MIRRORCLI_NETWORK
+  configurable:
+    - LCD settings (chain ID, URL, gas prices, gas adjustment) per network
+    - Mirror core contract addresses (collector, community, factory, gov, mint, oracle, staking, terraswap)
+  default_network: columbus (mainnet)
+command_groups:
+  - group: exec
+    aliases: [x]
+    description: Execute state-changing functions on Mirror smart contracts.
+    resources: [collector, community, factory, gov, mint, oracle, staking, airdrop, terraswap, token]
+    notes: airdrop is mainnet-only; terraswap aliased as ts.
+  - group: query
+    aliases: [q]
+    description: Run read-only smart-contract query functions.
+    resources: [collector, community, factory, gov, mint, oracle, staking, airdrop, terraswap, token]
+output_formats: [json, yaml]
+notes: >-
+  mirrorcli lets advanced users execute and query Mirror Protocol contracts
+  directly from the shell without the web interface, with full control over gas
+  management and transaction signing.

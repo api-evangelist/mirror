@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mirror.finance/
+versioning:
+  scheme: protocol-version
+  current: v2
+  detail: >-
+    The docs headline a "What's new for Mirror v2?" release; the API endpoint
+    itself is unversioned GraphQL. On-chain deployment tracks the Terra network
+    (columbus-5 mainnet, bombay-12 testnet).
+networks:
+  - Terra (columbus-5) — primary
+  - Ethereum — via the eth-web-dapp / Terra Bridge (mAsset bridging)
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: >-
+    No formal RFC 8594 Sunset/Deprecation header policy is published. Note the
+    Mirror Protocol and its Terra host chain were materially disrupted by the
+    May 2022 Terra/LUNA collapse; the protocol is effectively legacy/dormant.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+notes: >-
+  No dedicated status page or SLA was found. Lifecycle state is best described
+  as legacy: the developer surface (docs, GitHub, SDKs, GraphQL endpoint) remains
+  reachable but the protocol is no longer actively developed post-Terra-collapse.

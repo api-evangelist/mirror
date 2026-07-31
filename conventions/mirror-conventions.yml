@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mirror.finance/developer-tools/mirror-api
+api_style: graphql
+transport:
+  protocol: HTTP POST
+  content_type: application/json
+  single_endpoint: true
+  endpoints:
+    mainnet: https://graph.mirror.finance/graphql
+    testnet: https://bombay-graph.mirror.finance/graphql
+  playground: GraphiQL interface served at the endpoint URL
+  clients_recommended: [Apollo, Relay]
+authentication:
+  style: none
+  detail: Public unauthenticated GraphQL reads. See authentication/mirror-authentication.yml
+idempotency:
+  supported: false
+  detail: >-
+    The GraphQL data API is read-only, so idempotency is not applicable at the
+    API layer. On-chain writes are Terra transactions whose replay-safety is
+    provided by the account sequence/nonce, not by an HTTP idempotency-key header.
+pagination:
+  style: none-documented
+  detail: >-
+    The Mirror API returns full result sets for documented queries (e.g. assets,
+    prices); no cursor/offset pagination parameters are documented.
+versioning:
+  style: none-at-endpoint
+  detail: >-
+    The GraphQL endpoint is unversioned; protocol versioning (v1 -> v2) is tracked
+    at the contract/network level (columbus-5). See lifecycle/mirror-lifecycle.yml
+error_envelope:
+  style: graphql-errors
+  detail: >-
+    Errors follow the GraphQL specification's top-level "errors" array in the JSON
+    response body; there is no RFC 9457 problem+json surface.
+rate_limiting:
+  documented: false
+cross_links:
+  authentication: authentication/mirror-authentication.yml
+  lifecycle: lifecycle/mirror-lifecycle.yml
+  conformance: conformance/mirror-conformance.yml

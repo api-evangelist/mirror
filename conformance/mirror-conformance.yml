@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.mirror.finance/developer-tools/mirror-api
+standards:
+  - id: graphql
+    conforms: true
+    evidence: >-
+      Mirror API is a GraphQL data service (single HTTP POST endpoint, GraphiQL
+      introspection interface, GraphQL-spec error envelope).
+  - id: json
+    conforms: true
+    evidence: Requests and responses are application/json.
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use the GraphQL errors array, not application/problem+json.
+  - id: rest-openapi
+    conforms: false
+    evidence: The public API is GraphQL, not a REST/OpenAPI surface.
+  - id: fapi
+    conforms: false
+  - id: scim
+    conforms: false
+notes: >-
+  Derived from the documented API shape. No published third-party security
+  certifications (SOC 2 / ISO 27001 / PCI / HIPAA) were found, so no Compliance
+  pointer is emitted; on-chain contract security is addressed via the bug-bounty
+  program (see security/mirror-vulnerability-disclosure.yml).

@@ -1,0 +1,31 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.mirror.finance/developer-tools/mirror-api
+summary:
+  types: [none, wallet-signature]
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+  - name: MirrorAPIPublic
+    type: none
+    surface: Mirror API (GraphQL data service)
+    endpoints:
+      - https://graph.mirror.finance/graphql
+      - https://bombay-graph.mirror.finance/graphql
+    description: >-
+      The Mirror API is a public, read-only GraphQL data service exposing
+      protocol state (assets, prices, positions, staking). No API key, OAuth,
+      or bearer token is required or documented; queries are submitted as
+      unauthenticated HTTP POST requests.
+  - name: TerraWalletSignature
+    type: wallet-signature
+    surface: On-chain protocol (mirror.js / mirrorcli execute)
+    description: >-
+      State-changing operations (mint, trade, borrow, stake, governance) are
+      not authenticated at an API layer; they are Terra blockchain transactions
+      built as MsgExecuteContract objects and signed with the caller's wallet
+      key (MnemonicKey via terra.js). Authorization is enforced on-chain by the
+      Mirror CosmWasm contracts, not by an API credential.
+notes: >-
+  No OAuth scopes surface exists (skip scopes/). Auth is bimodal: unauthenticated
+  public GraphQL reads, and wallet-signed on-chain writes.
