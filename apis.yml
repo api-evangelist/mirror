@@ -57,7 +57,7 @@ tags:
 - GraphQL
 - Terra
 - Web3
-- Financial-Services
+- Financial Services
 tags_raw:
 - Company
 - DeFi
@@ -68,6 +68,7 @@ tags_raw:
 - Terra
 - Web3
 - Financial Services
+- Financial-Services
 apis:
 - name: Mirror API
   description: >-
