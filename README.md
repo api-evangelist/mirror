@@ -64,6 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Mirror is a company surfaced as a portfolio company of a16z, pantera-capital, spark-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Mirror Protocol is a decentralized finance (DeFi) synthetic-assets protocol built on the Terra blockchain (with an Ethereum bridge) that mints mirrored assets (mAssets) tracking the prices of real-world equities, commodities, and other assets. Its public developer surface is the Mirror API — a read-only GraphQL data service exposing protocol state (assets, prices, positions, staking) — together with the mirror.js JavaScript/TypeScript SDK and the mirrorcli command-line interface for querying and executing against the on-chain CosmWasm contracts. The protocol is governed by the MIR token. It is now in a legacy/dormant state following the May 2022 Terra/LUNA collapse, though its documentation, GitHub org, SDKs, and GraphQL endpoint remain reachable.
 
-Backed by: a16z, pantera-capital, spark-capital — https://mirror.finance/
+**Areas:** Company · DeFi · Cryptocurrency · Blockchain · Synthetic Assets · GraphQL · Terra · Web3 · Financial Services
+
+## Mirror on APIs.io
+
+Everything profiled for Mirror is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mirror/](https://apis.io/providers/mirror/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Mirror API](https://apis.io/apis/mirror/mirror-api/) — Read-only GraphQL data service (Mirror Graph) exposing Mirror Protocol state — synthetic assets (mAssets), prices, positions, and staking — from a single…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [mirror](https://apis.io/servers/mirror/mirror/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mirror Authentication](https://apis.io/security/mirror/mirror-authentication/)
+- [Mirror Domain Security](https://apis.io/security/mirror/mirror-domain-security/)
+- [Mirror Vulnerability Disclosure](https://apis.io/security/mirror/mirror-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://mirror.finance/)
+- [Documentation](https://docs.mirror.finance/)
+- [Getting started](https://docs.mirror.finance/developer-tools/mirror-api)
+- [API reference](https://docs.mirror.finance/developer-tools/mirror-api)
+- [Blog](https://mirror-protocol.medium.com/)
+- [Security](https://docs.mirror.finance/security)
+- [GitHub](https://github.com/mirror-protocol)
+
+## API Evangelist rating
+
+**Kin Score 16.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mirror/](https://apis.io/providers/mirror/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Mirror: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mirror/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
